@@ -5,8 +5,8 @@ using namespace std;
 
 class Player
 {
-
-
+	Player() {}
+	
 
 
 
@@ -14,6 +14,6 @@ class Player
 
 private:
 	int p_health = 60;
-
+	int p_attack = 2;
 
 };
