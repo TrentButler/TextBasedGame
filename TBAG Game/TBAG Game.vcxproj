@@ -110,9 +110,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Grid.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Class Definations.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="TextBaseed.cpp" />
   </ItemGroup>
