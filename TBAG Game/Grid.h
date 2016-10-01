@@ -1,6 +1,8 @@
 #pragma once
 #include <windows.h>
 #include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
 
 
@@ -9,13 +11,9 @@ class Grid
 
 public:
 	Grid() {}
-	Grid(bool, bool, bool, bool, bool, bool, bool, bool, bool, const char*);
-
-
-
-
-
-
+	Grid(bool, bool, bool, bool, bool, bool, bool, bool, bool,const char *);
+	
+	void printRoom(const char *);
 
 private:
 	bool g_dark;
@@ -30,7 +28,7 @@ private:
 	bool g_west;
 
 
-	const char * g_words;
+	
 
 
 };

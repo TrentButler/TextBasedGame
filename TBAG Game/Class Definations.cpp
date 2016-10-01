@@ -24,7 +24,7 @@ using namespace std;
 //Room Class Definations
 
 
-Grid::Grid(bool dark, bool locked, bool emeny, bool weapon, bool north, bool south, bool east, bool west, bool key, const char *word)
+Grid::Grid(bool dark, bool locked, bool emeny, bool weapon, bool north, bool south, bool east, bool west, bool key,const char * printScreen)
 {
 
 	dark = g_dark;
@@ -35,14 +35,29 @@ Grid::Grid(bool dark, bool locked, bool emeny, bool weapon, bool north, bool sou
 	south = g_south;
 	east = g_east;
 	west = g_west;
-	word = g_words;
 	key = g_key;
+	printRoom(printScreen);
 
 
 }
 
 
 
+void Grid::printRoom(const char * file_nam)
+{
+
+	string r_string;
+	ifstream r_file;
+	r_file.open(file_nam);
+
+	while (!r_file.eof())
+	{
+		getline(r_file, r_string);
+		cout << r_string << '\n';
+	}
+	r_file.close();
+
+}
 
 
 
