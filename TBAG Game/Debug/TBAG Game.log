@@ -1,3 +1,8 @@
-﻿  Class Definations.cpp
-  TBAG Game.vcxproj -> C:\Users\Redtrent\Documents\GitHub\TextBasedGame\Debug\TBAG Game.exe
-  TBAG Game.vcxproj -> C:\Users\Redtrent\Documents\GitHub\TextBasedGame\Debug\TBAG Game.pdb (Partial PDB)
+﻿  String Deff.cpp
+c:\users\trent.butler\documents\visual studio 2015\projects\tbag game\tbag game\string deff.cpp(64): warning C4305: 'return': truncation from 'int' to 'bool'
+  Main.cpp
+  Class Definations.cpp
+  Generating Code...
+c:\users\trent.butler\documents\visual studio 2015\projects\tbag game\tbag game\string deff.cpp(221): warning C4172: returning address of local variable or temporary: Test1
+  TBAG Game.vcxproj -> C:\Users\trent.butler\documents\visual studio 2015\Projects\TBAG Game\Debug\TBAG Game.exe
+  TBAG Game.vcxproj -> C:\Users\trent.butler\documents\visual studio 2015\Projects\TBAG Game\Debug\TBAG Game.pdb (Partial PDB)

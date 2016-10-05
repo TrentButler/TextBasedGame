@@ -11,34 +11,35 @@ class Grid
 
 public:
 	Grid() {}
-	Grid(int x, int y)
-	{
-		xPosition = x;
-		yPosition = y;
-	}
 	
-	
-	
-	Grid(bool dark, bool locked, bool enemy, bool weapon, bool north, bool south, bool east, bool west, bool key/*,const char **/);
-	
-	void printRoom(const char *);
-
-	int xPosition;
-	int yPosition;
-	bool g_dark;
-	bool g_locked;
-	bool g_emeny;
-	bool g_weapon;
-	bool g_key;
-
+	Grid(bool north, bool south, bool east, bool west, const char * entry);
+	int g_xpos;
+	int g_ypos;
 	bool g_north;
 	bool g_south;
 	bool g_east;
 	bool g_west;
-
+	const char * g_entry;
 
 	
 
 
 };
 
+class Node:Grid
+{
+
+public:
+	Node() {}
+
+	Node(int x, int y)
+	{
+		g_xpos = x;
+		g_ypos = y;
+	}
+
+
+
+
+
+};
