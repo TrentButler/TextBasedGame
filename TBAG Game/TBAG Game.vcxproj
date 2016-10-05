@@ -113,11 +113,12 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="String.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Class Definations.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="TextBaseed.cpp" />
+    <ClCompile Include="String Deff.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

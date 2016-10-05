@@ -1,21 +1,110 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Grid.h"
-
+#include "String.h"
 #include <windows.h>
 #include <iostream>
 using namespace std;
 
 //Player Class Definations
 
+int Player::p_North()
+{
+	p_xposition--;
+	return p_xposition;
 
-//Player::Player(p_position x_position, p_position y_position)
+}
+
+int Player::p_South()
+{
+	p_xposition++;
+	return p_xposition;
+}
+
+int Player::p_East()
+{
+	p_yposition++;
+	return p_yposition;
+}
+
+int Player::p_West()
+{
+	p_yposition--;
+	return p_yposition;
+}
+
+
+Player::Player(int x_position, int y_position, int health, int attack, bool crowbar, bool weaponkey, bool bosskey, bool BFG, bool rock)
+{
+	p_xposition = x_position;
+	p_yposition = y_position;
+
+	p_health = health;
+	p_attack = attack;
+
+	
+	p_crowbar = crowbar;
+	p_weaponkey = weaponkey;
+	p_bosskey = bosskey;
+	p_BFG = BFG;
+	p_rock = rock;
+
+}
+
+Enemy::Enemy(int x_position, int y_position,int health, int attack, bool alive)
+{
+	e_health = health;
+	e_attack = attack;
+	e_alive = alive;
+	e_xposition = x_position;
+	e_yposition = y_position;
+
+}
+
+//void Player::p_gridmove(Player p_move, char * test)
 //{
-//
-//	x_position.x;
-//	y_position.y;
+//	MyString a = MyString(test);
+//	Grid b = Grid();
 //	
+//
+//	if (a.subString("move north") == true && b.g_north == true && b.g_locked == false && b.g_dark == false)
+//	{
+//		p_North();
+//	}
+//	
+//	if (a.subString("move south") == true && b.g_south == true && b.g_locked == false && b.g_dark == false)
+//	{
+//		p_South();
+//	}
+//
+//	if (a.subString("move east") == true && b.g_east == true && b.g_locked == false && b.g_dark == false)
+//	{
+//		p_East();
+//	}
+//
+//	if (a.subString("move west") == true && b.g_west == true && b.g_locked == false && b.g_dark == false)
+//	{
+//		p_West();
+//	}
+//
+//
 //}
+
+
+
+
+void Player::p_moveTest(Player test, char * z)
+{
+
+	Grid z = Grid(test.p_xposition, test.p_yposition);
+	
+	// Attempt to access type 'Grid' array index and give it the 'x' and 'y' position of 'Player'
+
+
+
+}
+
+
 
 
 
@@ -24,7 +113,7 @@ using namespace std;
 //Room Class Definations
 
 
-Grid::Grid(bool dark, bool locked, bool emeny, bool weapon, bool north, bool south, bool east, bool west, bool key,const char * printScreen)
+Grid::Grid(bool dark, bool locked, bool emeny, bool weapon, bool north, bool south, bool east, bool west, bool key/*,const char * printScreen*/)
 {
 
 	dark = g_dark;
@@ -36,7 +125,7 @@ Grid::Grid(bool dark, bool locked, bool emeny, bool weapon, bool north, bool sou
 	east = g_east;
 	west = g_west;
 	key = g_key;
-	printRoom(printScreen);
+	/*printRoom(printScreen);*/
 
 
 }

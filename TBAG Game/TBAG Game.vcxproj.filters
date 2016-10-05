@@ -24,15 +24,18 @@
     <ClInclude Include="Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="String.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TextBaseed.cpp">
+    <ClCompile Include="Class Definations.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="Class Definations.cpp">
+    <ClCompile Include="String Deff.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

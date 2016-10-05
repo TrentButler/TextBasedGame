@@ -1,34 +1,3 @@
-﻿  TextBaseed.cpp
-  Main.cpp
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(29): error C2065: 'room2': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(29): error C2065: 'room3': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(29): error C2065: 'room4': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(29): error C2065: 'room5': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(29): error C2065: 'room6': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(30): error C2065: 'room7': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(30): error C2065: 'room8': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(30): error C2065: 'room9': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(30): error C2065: 'room10': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(30): error C2065: 'room11': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(30): error C2065: 'room12': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(31): error C2065: 'room13': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(31): error C2065: 'room14': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(31): error C2065: 'room15': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(31): error C2065: 'room16': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(31): error C2065: 'room17': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(31): error C2065: 'room18': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(32): error C2065: 'room19': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(32): error C2065: 'room20': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(32): error C2065: 'room21': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(32): error C2065: 'room22': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(32): error C2065: 'room23': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(32): error C2065: 'room24': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(33): error C2065: 'room25': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(33): error C2065: 'room26': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(33): error C2065: 'room27': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(33): error C2065: 'room28': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(33): error C2065: 'room29': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(33): error C2065: 'room30': undeclared identifier
-c:\users\redtrent\documents\github\textbasedgame\tbag game\main.cpp(36): error C2078: too many initializers
-  Class Definations.cpp
-  Generating Code...
+﻿  Class Definations.cpp
+  TBAG Game.vcxproj -> C:\Users\Redtrent\Documents\GitHub\TextBasedGame\Debug\TBAG Game.exe
+  TBAG Game.vcxproj -> C:\Users\Redtrent\Documents\GitHub\TextBasedGame\Debug\TBAG Game.pdb (Partial PDB)

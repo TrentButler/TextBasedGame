@@ -11,11 +11,20 @@ class Grid
 
 public:
 	Grid() {}
-	Grid(bool, bool, bool, bool, bool, bool, bool, bool, bool,const char *);
+	Grid(int x, int y)
+	{
+		xPosition = x;
+		yPosition = y;
+	}
+	
+	
+	
+	Grid(bool dark, bool locked, bool enemy, bool weapon, bool north, bool south, bool east, bool west, bool key/*,const char **/);
 	
 	void printRoom(const char *);
 
-private:
+	int xPosition;
+	int yPosition;
 	bool g_dark;
 	bool g_locked;
 	bool g_emeny;
