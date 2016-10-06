@@ -1,8 +1,17 @@
 ﻿  String Deff.cpp
-c:\users\trent.butler\documents\visual studio 2015\projects\tbag game\tbag game\string deff.cpp(64): warning C4305: 'return': truncation from 'int' to 'bool'
+c:\users\redtrent\documents\github\textbasedgame\tbag game\player.h(21): error C2061: syntax error: identifier 'Grid'
+c:\users\redtrent\documents\github\textbasedgame\tbag game\string deff.cpp(64): warning C4305: 'return': truncation from 'int' to 'bool'
   Main.cpp
+c:\users\redtrent\documents\github\textbasedgame\tbag game\player.h(21): error C2061: syntax error: identifier 'Grid'
   Class Definations.cpp
+c:\users\redtrent\documents\github\textbasedgame\tbag game\player.h(21): error C2061: syntax error: identifier 'Grid'
+c:\users\redtrent\documents\github\textbasedgame\tbag game\class definations.cpp(65): error C2511: 'int Player::testFunction(char *,Grid [][4])': overloaded member function not found in 'Player'
+  c:\users\redtrent\documents\github\textbasedgame\tbag game\player.h(10): note: see declaration of 'Player'
+c:\users\redtrent\documents\github\textbasedgame\tbag game\class definations.cpp(67): error C2597: illegal reference to non-static member 'Player::p_yposition'
+c:\users\redtrent\documents\github\textbasedgame\tbag game\class definations.cpp(67): error C3867: 'Player::p_yposition': non-standard syntax; use '&' to create a pointer to member
+c:\users\redtrent\documents\github\textbasedgame\tbag game\class definations.cpp(67): error C2568: '[': unable to resolve function overload
+c:\users\redtrent\documents\github\textbasedgame\tbag game\class definations.cpp(67): error C2597: illegal reference to non-static member 'Player::p_xposition'
+c:\users\redtrent\documents\github\textbasedgame\tbag game\class definations.cpp(67): error C2228: left of '.g_north' must have class/struct/union
+c:\users\redtrent\documents\github\textbasedgame\tbag game\class definations.cpp(69): error C2352: 'Player::p_North': illegal call of non-static member function
+  c:\users\redtrent\documents\github\textbasedgame\tbag game\class definations.cpp(15): note: see declaration of 'Player::p_North'
   Generating Code...
-c:\users\trent.butler\documents\visual studio 2015\projects\tbag game\tbag game\string deff.cpp(221): warning C4172: returning address of local variable or temporary: Test1
-  TBAG Game.vcxproj -> C:\Users\trent.butler\documents\visual studio 2015\Projects\TBAG Game\Debug\TBAG Game.exe
-  TBAG Game.vcxproj -> C:\Users\trent.butler\documents\visual studio 2015\Projects\TBAG Game\Debug\TBAG Game.pdb (Partial PDB)

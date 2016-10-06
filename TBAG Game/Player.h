@@ -18,8 +18,8 @@ public:
 	int p_East();
 	int p_West();
 	
-private:
-	
+	/*int testFunction(char *test);*/
+
 	int p_xposition;
 	int p_yposition;
 	bool p_item;
