@@ -4,26 +4,47 @@
 using namespace std;
 
 
-
-
 class Player
 {
 
 public:
-	Player() {}
-	Player(int x, int y, bool item);
-	
-	int p_North();
-	int p_South();
-	int p_East();
-	int p_West();
-	
-	/*int testFunction(char *test);*/
+	Player(Grid &room) :p_index(0), currentRoom(&room)
+	{
+		cout << currentRoom->p_description;
+	}
 
-	int p_xposition;
-	int p_yposition;
-	bool p_item;
+	void moveRight()
+	{
+		cout << currentRoom->p_description;
+		currentRoom++;
+	}
 	
+	void moveLeft()
+	{
+		cout << currentRoom->p_description;
+		currentRoom--;
+	 }
+	
+	void moveDown()
+	{
+		p_index += 4;
+		
+		if (p_index < 16)
+		{
+			currentRoom += p_index;
+			cout << currentRoom->p_description;
+		}
+		else
+		{
+			cout << currentRoom->p_description;
+			cout << "NOPE!";
+		}
+	}
+
+
+	int p_index;
+	bool p_item;
+	Grid * currentRoom;
 
 };
 

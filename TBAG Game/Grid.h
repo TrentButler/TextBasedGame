@@ -6,31 +6,54 @@
 using namespace std;
 
 
-class Grid
+struct Position
+{
+	int x;
+	int y;
+};
+
+enum Direction
+{
+	North,
+	South,
+	East,
+	West,
+};
+
+class Node
 {
 
-public:
-	Grid() {};
-	Grid(int x, int y)
-	{
-		g_xpos = x;
-		g_ypos = y;
-	}
-	
-	
-	
-	Grid(bool north, bool south, bool east, bool west, const char * entry);
-	
-	int g_xpos;
-	int g_ypos;
+	Position n_pos;
+
+	Node() {};
+	Node(bool north, bool south, bool east, bool west, const char * entry);
 	bool g_north;
 	bool g_south;
 	bool g_east;
 	bool g_west;
-	const char * g_entry;
-	
-	
+
+
+
 
 
 };
+
+
+class Grid
+{
+
+public:
+	Grid()
+	{
+
+	}
+	Grid(bool n, bool s, bool e, bool w, const char* description) : p_description(description)
+	{
+		
+	}
+	
+	const char* p_description;
+
+};
+
 

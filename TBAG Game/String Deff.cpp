@@ -114,7 +114,7 @@ char * MyString::Append(MyString a)
 char * MyString::Prepend(MyString a)
 {
 
-	cout << "\n";
+	
 	int i = stringlength(t_data); // destination
 	int j = 0; // source
 
