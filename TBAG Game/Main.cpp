@@ -23,14 +23,32 @@ public:
 
 	void moveRight()
 	{
-	cout <<"You are currently in "<< currentRoom->p_description<<"\n";
-	currentRoom++;
+	
+	if (p_index < 16)
+	{
+		cout << currentRoom->p_description << "\n";
+		currentRoom++;
+	}
+
+	else
+	{
+		
+		cout << " \n Nope!!!! \n";
+	}
 	}
 
 	void moveLeft()
 	{
-	cout << "You are currently in " << currentRoom->p_description<<"\n";
-	currentRoom--;
+		if (p_index > 16)
+		{
+			cout << currentRoom->p_description << "\n";
+			currentRoom--;
+		}
+
+		else
+		{
+			cout << "\n Nope!!!! \n";
+		}
 	}
 
 	void moveDown()
@@ -40,7 +58,7 @@ public:
 		if (p_index < 16)
 		{
 			currentRoom += p_index;
-			cout << "You are currently in " << currentRoom->p_description;
+			cout << currentRoom->p_description;
 		}
 		else
 		{
@@ -94,7 +112,7 @@ int main()
 	int y = 0;
 	int count = 0;
 
-	Grid room1 = Grid{ 1,0,1,0,"room1.txt" };
+	Grid room1 = Grid{ 1,0,1,0,"This room is empty \n You are in room 1.... \n" };
 	Grid room2 = Grid{ 1,0,1,1,"This room is empty \n You are in room 2.... \n" };
 	Grid room3 = Grid{ 1,0,1,1,"This room is empty \n You are in room 3.... \n" };
 	Grid room4 = Grid{ 1, 0, 0, 1,"This room is empty \n You are in room 4.... \n" };
@@ -136,24 +154,23 @@ int main()
 			Elliot.moveUp();
 			break;
 		}
-		
-		
+				
 		case's':
 		{
 			Elliot.moveDown();
-			
+			break;
 		}
 		
 		case'a':
 		{
 			Elliot.moveLeft();
-			
+			break;
 		}
 		
 		case 'd':
 		{
 			Elliot.moveLeft();
-			
+			break;
 		}
 		
 
@@ -161,7 +178,7 @@ int main()
 		{
 			system("cls");
 			cout << "Wrong Input bro";
-			
+			break;
 		}
 		
 
