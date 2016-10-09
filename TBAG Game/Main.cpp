@@ -1,10 +1,9 @@
-#include "Player.h"
 #include "Grid.h"
 #include "String.h"
-
+#include "Function Deff.h"
 #include <windows.h>
 #include <string>
-#include <iostream>
+#include <fstream>
 using namespace std;
 
 
@@ -19,10 +18,7 @@ public:
 	}
 
 	Player() {};
-		
-	
 	Grid * currentRoom;
-	
 	int p_index;
 
 	void moveRight()
@@ -30,7 +26,7 @@ public:
 
 		if (currentRoom->g_east == true)
 		{
-			cout << currentRoom->p_description << "\n";
+			/*cout << currentRoom->p_description << "\n";*/
 			currentRoom++;
 		}
 
@@ -40,7 +36,7 @@ public:
 	{
 		if (currentRoom->g_west == true)
 		{
-			cout << currentRoom->p_description << "\n";
+			/*cout << currentRoom->p_description << "\n";*/
 			currentRoom--;
 		}
 	}
@@ -53,7 +49,7 @@ public:
 		if (p_index < 16 && currentRoom->g_south == true)
 		{
 			currentRoom += p_index;
-			cout << currentRoom->p_description;
+			/*cout << currentRoom->p_description;*/
 		}
 		else
 		{
@@ -72,7 +68,7 @@ public:
 		if (p_index > 0 && currentRoom->g_north == true)
 		{
 			currentRoom -= p_index;
-			cout << currentRoom->p_description;
+		/*	cout << currentRoom->p_description;*/
 		}
 
 		else
@@ -83,6 +79,8 @@ public:
 		
 
 	}
+
+	
 
 
 	bool p_item;
@@ -103,25 +101,29 @@ int main()
 	int y = 0;
 	int count = 0;
 
-	Grid room0 = Grid(0, 1, 1, 1, "Game Over \nYou Win! \n \nPress 'Q' to quit.... \n \n");
-	Grid room1 = Grid(0, 1, 1, 1, "This room is empty \n Entering Room 1");
-	Grid room2 = Grid(0, 1, 1, 1, "This room is empty \n Entering Room 2");
-	Grid room3 = Grid(0, 1, 0, 1, "This room is empty \n Entering Room 3");
+	
+	Grid room0 = Grid(0, 0, 0, 0, 0, "Game Over \nYou Win! \n \nPress 'Q' to quit.... \n \n"); // Win room
 
-	Grid room4 = Grid(1, 1, 0, 0, "This room is empty \n Entering Room 4");
-	Grid room5 = Grid(1, 1, 1, 1, "This room is empty \n Entering Room 5");
-	Grid room6 = Grid(1, 1, 1, 1, "This room is empty \n Entering Room 6");
-	Grid room7 = Grid(1, 1, 0, 1, "This room is empty \n Entering Room 7");
 
-	Grid room8 = Grid(1, 1, 0, 0, "This room is empty \n Entering Room 8");
-	Grid room9 = Grid(1, 1, 1, 1, "This room is empty \n Entering Room 9");
-	Grid room10 = Grid(1, 1, 1, 1, "This room is empty \n Entering Room 10");
-	Grid room11 = Grid(1, 1, 0, 1, "This room is empty \n Entering Room 11");
+	
+	Grid room1 = Grid(0, 1, 1, 0, 0, "This room is empty \n \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right...\n \nChoose a direction.... \n \n");
+	Grid room2 = Grid(0, 1, 1, 1,0, "This room is empty \n \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
+	Grid room3 = Grid(0, 1, 0, 1,0, "This room is empty \n \nThere is a door behind you... \nThere is a door to your left... \n \nChoose a direction....\n \n");
 
-	Grid room12 = Grid(1, 0, 0, 1, "This room is empty \n Entering Room 12");
-	Grid room13 = Grid(1, 0, 1, 0, "This room is empty \n Entering Room 13");
-	Grid room14 = Grid(1, 0, 1, 1, "This room is empty \n Entering Room 14");
-	Grid room15 = Grid(1, 0, 1, 1, "This room is empty \n Entering Room 15");
+	Grid room4 = Grid(0, 1, 0, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
+	Grid room5 = Grid(1, 1, 1, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right... \n \nChoose a direction... \n \n");
+	Grid room6 = Grid(1, 1, 1, 1,0, "This room is empty \n \nThere is door in front of you... \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right \n \nChoose a direction... \n \n");
+	Grid room7 = Grid(1, 1, 0, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \n \nChoose you direction.... \n \n");
+
+	Grid room8 = Grid(1, 1, 1, 0, 1, "You have found the key to the exit!!!! \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
+	Grid room9 = Grid(1, 1, 1, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
+	Grid room10 = Grid(1, 1, 1, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
+	Grid room11 = Grid(1, 1, 0, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \n \nChoose a direction.... \n \n");
+
+	Grid room12 = Grid(1, 0, 1, 0,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
+	Grid room13 = Grid(1, 0, 1, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door to your left... \nThere is a door to your right... \n \n");
+	Grid room14 = Grid(1, 0, 1, 1,0, "This is the start of your journey... \n \nFind the key to unlock the door.... \nThe door is in the upper left corner of this map.... \nThe key is somewhere in this grid... \nGood Luck... \n \nThere is a door in front of you... \nThere is a door to your left... \nThere is a door to your right... \n \n");
+	Grid room15 = Grid(1, 0, 0, 1,0, "This room is empty \n \n There is a door in front of you... \nThere is a door to your left... \n \nChoose a direction.... \n \n");
 
 	Grid nodes[16] = {
 		room0,room1,room2,room3,
@@ -131,12 +133,15 @@ int main()
 	};
 
 
-	Player Elliot = Player(nodes[15]); //  PLAYER
+	Player Elliot = Player(nodes[14]); //  PLAYER
 	
 	
 	
 	Grid grid = Grid();
 	Player player = Player();
+
+
+
 
 	
 	while (true)
@@ -164,28 +169,34 @@ int main()
 						
 				
 				char gameInput;
-				cin >> gameInput;
+				cout << Elliot.currentRoom->p_description << "\n \n"; cin >> gameInput;			
 				system("cls");
 
 
-				if (player.p_index > 16)
+				if (Elliot.p_index > 16)
 				{
 											
 					player.p_index = 16;
 					
 				}
 
-				if (player.p_index < 0)
+				if (Elliot.p_index < 0)
 				{
 					player.p_index = 0;
 				}
 
-				/*if (grid.g_north == false)
+				if (player.p_index=8) // Work on this
 				{
-					
-					cout << "Player cannot go that way...";
+					Elliot.p_item = true;
+				}
 
-				}*/
+				if (Elliot.p_item == true)
+				{
+					nodes[1].g_west = true;
+					nodes[4].g_north = true;
+				}
+			
+				
 
 
 				

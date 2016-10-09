@@ -1,5 +1,3 @@
-#include "Player.h"
-#include "Enemy.h"
 #include "Grid.h"
 #include "String.h"
 

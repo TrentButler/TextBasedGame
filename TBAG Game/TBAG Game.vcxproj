@@ -110,13 +110,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Function Deff.h" />
     <ClInclude Include="Grid.h" />
-    <ClInclude Include="Player.h" />
     <ClInclude Include="String.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Class Definations.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="String Deff.cpp" />
   </ItemGroup>
