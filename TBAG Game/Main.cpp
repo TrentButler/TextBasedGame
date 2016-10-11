@@ -1,6 +1,5 @@
 #include "Grid.h"
 #include "String.h"
-#include "Function Deff.h"
 #include <windows.h>
 #include <string>
 #include <fstream>
@@ -12,8 +11,9 @@ class Player
 {
 
 public:
-	Player(Grid &room) :p_index(0), currentRoom(&room)
+	Player(Grid &room,bool item) :p_index(0), currentRoom(&room)
 	{
+		p_item = item;
 		/*cout << currentRoom->p_description;*/
 	}
 
@@ -93,37 +93,27 @@ public:
 
 int main()
 {
-
-
-
-	bool runTBAG = false;
-	int x = 0;
-	int y = 0;
-	int count = 0;
-
+	Grid room0 = Grid(0, 0, 0, 0, 0, "You have escaped the underground test facility.... \nDont let the men with no eyes catch you again... \nYou might not be as lucky next time... \n \n You Win! \n \nPress 'Q' to quit.... \n \n"); // Win room
 	
-	Grid room0 = Grid(0, 0, 0, 0, 0, "Game Over \nYou Win! \n \nPress 'Q' to quit.... \n \n"); // Win room
-
-
 	
-	Grid room1 = Grid(0, 1, 1, 0, 0, "This room is empty \n \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right...\n \nChoose a direction.... \n \n");
-	Grid room2 = Grid(0, 1, 1, 1,0, "This room is empty \n \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
-	Grid room3 = Grid(0, 1, 0, 1,0, "This room is empty \n \nThere is a door behind you... \nThere is a door to your left... \n \nChoose a direction....\n \n");
+	Grid room1 = Grid(0, 1, 1, 0, 0, "There is a vending machine in this empty room... \nThe only thing inside of the machine is a pack of breath mints... \nHow ironic... \n \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right...\n \nChoose a direction.... \n \n");
+	Grid room2 = Grid(0, 1, 1, 1,0, "You walk in a room with someone straped on a bed... \nThey seem to already be dead... \nThe room has a smell you have never encountered before... \n \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
+	Grid room3 = Grid(0, 1, 0, 1,0, "You enter a room that smells like a combination of a restruant and a morgue... \nThis room is where they keep the remains of their test subjects... \nThey are cooking what is left of the test subjects... \n \nThere is a door behind you... \nThere is a door to your left... \n \nChoose a direction....\n \n");
 
-	Grid room4 = Grid(0, 1, 0, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
-	Grid room5 = Grid(1, 1, 1, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right... \n \nChoose a direction... \n \n");
-	Grid room6 = Grid(1, 1, 1, 1,0, "This room is empty \n \nThere is door in front of you... \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right \n \nChoose a direction... \n \n");
-	Grid room7 = Grid(1, 1, 0, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \n \nChoose you direction.... \n \n");
+	Grid room4 = Grid(0, 1, 0, 1,0, "There are the remains of one the facility workers... \nThe same one who abducted you... \nFrom the waist up is all that remains of him... \nYou kick him in the head... \nYou decapitate his head and it rolls across the floor... \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
+	Grid room5 = Grid(1, 1, 1, 1,0, "You wander upon a humanoid figure standing in the corner trembling... \nIt turns and stares with fear.... \nYou should keep moving.... \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right... \n \nChoose a direction... \n \n");
+	Grid room6 = Grid(1, 1, 1, 1,0, "You stumble upon the facility dress room... \nAll of the hazmat suits are gone... \nYou have to continue without them... \n \nThere is door in front of you... \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right \n \nChoose a direction... \n \n");
+	Grid room7 = Grid(1, 1, 0, 1,0, "You enter a empty testing room...\nIt seems to have been recently cleaned up... \n There is a bed that seems to have some sort of restraints on it... \nYou better turn back the other way... \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \n \nChoose you direction.... \n \n");
 
-	Grid room8 = Grid(1, 1, 1, 0, 1, "You have found the key to the exit!!!! \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
-	Grid room9 = Grid(1, 1, 1, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
-	Grid room10 = Grid(1, 1, 1, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
-	Grid room11 = Grid(1, 1, 0, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \n \nChoose a direction.... \n \n");
+	Grid room8 = Grid(1, 1, 1, 0, 1, "There is a desk with its drawer open... \nThe exit key is inside... \nThe key is covered in some kind of abnormal mucus... \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your right... \n \nChoose a direction.... \n \n"); // key room
+	Grid room9 = Grid(1, 1, 1, 1,0, "You enter a empty room... \nThe walls ooze with what seems to be a mix of blood and some alien subastance... \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
+	Grid room10 = Grid(1, 1, 1, 1,0, "You walk in what seems to be the facility restroom... \nYour eyes gaze upon a horrid sight... \nIts better you dont know what those two were doing... \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
+	Grid room11 = Grid(1, 1, 0, 1,0, "A freakish looking test monkey lays on the floor.... \nIt breathes out its last breath... \n \nThere is a door in front of you... \nThere is a door behind you... \nThere is a door to your left... \n \nChoose a direction.... \n \n");
 
-	Grid room12 = Grid(1, 0, 1, 0,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
-	Grid room13 = Grid(1, 0, 1, 1,0, "This room is empty \n \nThere is a door in front of you... \nThere is a door to your left... \nThere is a door to your right... \n \n");
-	Grid room14 = Grid(1, 0, 1, 1,0, "This is the start of your journey... \n \nFind the key to unlock the door.... \nThe door is in the upper left corner of this map.... \nThe key is somewhere in this grid... \nGood Luck... \n \nThere is a door in front of you... \nThere is a door to your left... \nThere is a door to your right... \n \n");
-	Grid room15 = Grid(1, 0, 0, 1,0, "This room is empty \n \n There is a door in front of you... \nThere is a door to your left... \n \nChoose a direction.... \n \n");
+	Grid room12 = Grid(1, 0, 1, 0,0, "This room is dark... \nYou begin to hear a biting noise from the corner of the room... \nYou better move along... \n \nThere is a door in front of you... \nThere is a door to your right... \n \nChoose a direction.... \n \n");
+	Grid room13 = Grid(1, 0, 1, 1,0, "There is a black bag on the floor.... \nIt has a peculiar smell...  \n \nThere is a door in front of you... \nThere is a door to your left... \nThere is a door to your right... \nChoose a direction.... \n \n");
+	Grid room14 = Grid(1, 0, 1, 1,0, "This is the start of your journey to escape the Izan Eibmoz test facility... \n \nFind the key to unlock the bunker.... \nThe exit is in the upper left corner of this test facility.... \nThe key is somewhere in this horrid place... \nGood Luck... \n \nThere is a door in front of you... \nThere is a door to your left... \nThere is a door to your right... \nChoose a direction.... \n \n");
+	Grid room15 = Grid(1, 0, 0, 1,0, "You enter a empty testing room...\nIt seems to have been recently cleaned up... \nThere is a bed that seems to have some sort of restraints on it... \nYou better turn back the other way... \n \nThere is a door in front of you... \nThere is a door to your left... \n \nChoose a direction.... \n \n");
 
 	Grid nodes[16] = {
 		room0,room1,room2,room3,
@@ -132,11 +122,9 @@ int main()
 		room12,room13,room14,room15
 	};
 
-
-	Player Elliot = Player(nodes[14]); //  PLAYER
-	
-	
-	
+	bool runTBAG = false;
+	Player Elliot = Player(nodes[14],0); //  PLAYER
+		
 	Grid grid = Grid();
 	Player player = Player();
 
@@ -169,6 +157,7 @@ int main()
 						
 				
 				char gameInput;
+				system("cls");
 				cout << Elliot.currentRoom->p_description << "\n \n"; cin >> gameInput;			
 				system("cls");
 
@@ -185,8 +174,9 @@ int main()
 					player.p_index = 0;
 				}
 
-				if (player.p_index=8) // Work on this
+				if (Elliot.p_index = 8)
 				{
+					
 					Elliot.p_item = true;
 				}
 
@@ -195,10 +185,7 @@ int main()
 					nodes[1].g_west = true;
 					nodes[4].g_north = true;
 				}
-			
-				
-
-
+						
 				
 				switch (gameInput)
 				{
@@ -233,6 +220,7 @@ int main()
 					cout << "Move Down ~~>> s <<~~ \n \n";
 					cout << "Move Left ~~>> a <<~~ \n \n";
 					cout << "Move Right ~~>> d <<~~ \n \n";
+					system("pause");
 					break;
 				}
 				
@@ -258,8 +246,6 @@ int main()
 
 				}
 				
-
-
 			}
 			break;
 		}

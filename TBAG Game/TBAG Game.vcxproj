@@ -110,7 +110,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Function Deff.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="String.h" />
   </ItemGroup>

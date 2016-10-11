@@ -11,7 +11,6 @@ class Grid
 
 public:
 	Grid() {};
-	
 	Grid(bool n, bool s, bool e, bool w, bool key , const char* description) 
 	{
 		p_description = description;
@@ -24,12 +23,6 @@ public:
 
 	}
 	
-	void printRoom(char * file_nam);
-	
-
-
-
-
 	const char* p_description;
 	bool g_key;
 	bool g_north;
